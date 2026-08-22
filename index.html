@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EES Cocinas Integrales y Closets — Diseño a tu medida en Cuernavaca</title>
+<meta name="description" content="Cocinas integrales, closets y alacenas fabricados a tu medida en Cuernavaca, Morelos. Diseño, fabricación e instalación.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Expanded:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F6F2EA;
+    --paper:#FBF9F5;
+    --teal:#3E9C93;
+    --teal-dark:#2B6E68;
+    --teal-deep:#1F4F4B;
+    --tan:#BB8E60;
+    --tan-light:#E7D3B8;
+    --ink:#333B4E;
+    --ink-soft:#5B6478;
+    --charcoal:#22262E;
+    --charcoal-soft:#2E333D;
+    --white:#FFFFFF;
+    --line: rgba(51,59,78,0.12);
+    --shadow: 0 20px 50px -25px rgba(34,38,46,0.35);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Archivo', sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+
+  .container{
+    width:100%;
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  h1,h2,h3{font-family:'Archivo', sans-serif; font-weight:800; letter-spacing:-0.01em; color:var(--ink);}
+  .eyebrow{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:1.05rem;
+    color:var(--tan);
+    letter-spacing:0.01em;
+  }
+
+  /* -------- signature grid motif (from the brand's own catalog mark) -------- */
+  .grid-mark{
+    display:inline-grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:5px;
+    width:46px;
+  }
+  .grid-mark span{
+    width:100%;
+    aspect-ratio:1;
+    background:var(--tan-light);
+    border-radius:1px;
+  }
+  .grid-mark.teal span{ background: rgba(62,156,147,0.35); }
+  .grid-mark.on-dark span{ background: rgba(231,211,184,0.28); }
+
+  /* -------- header -------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(246,242,234,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 0;
+  }
+  .brand{
+    display:flex; align-items:center; gap:12px;
+  }
+  .brand-mark{
+    width:44px; height:44px; border-radius:50%;
+    background: var(--teal);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--white); font-weight:800; font-size:1rem; letter-spacing:0.02em;
+    flex-shrink:0;
+  }
+  .brand-name{
+    font-weight:800; font-size:1.02rem; line-height:1.15; color:var(--ink);
+  }
+  .brand-name small{
+    display:block; font-family:'Archivo', sans-serif; font-weight:500; font-size:0.68rem;
+    color:var(--ink-soft); letter-spacing:0.06em; text-transform:uppercase; margin-top:2px;
+  }
+  nav.links{ display:flex; align-items:center; gap:34px; }
+  nav.links a{
+    font-size:0.88rem; font-weight:600; color:var(--ink-soft);
+    text-transform:uppercase; letter-spacing:0.04em;
+    transition:color .2s ease;
+  }
+  nav.links a:hover{ color:var(--teal-dark); }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:12px 22px;
+    border-radius:100px;
+    font-weight:700; font-size:0.86rem;
+    letter-spacing:0.02em;
+    cursor:pointer;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--teal); color:var(--white);
+    box-shadow:0 12px 24px -12px rgba(62,156,147,0.7);
+  }
+  .btn-primary:hover{ background:var(--teal-dark); transform:translateY(-1px); }
+  .btn-ghost{
+    border:1.5px solid var(--ink); color:var(--ink);
+  }
+  .btn-ghost:hover{ background:var(--ink); color:var(--white); }
+  .header-cta{ display:flex; align-items:center; gap:14px; }
+  .menu-toggle{ display:none; }
+
+  /* -------- hero -------- */
+  .hero{
+    position:relative;
+    padding:88px 0 60px;
+    overflow:hidden;
+  }
+  .hero .container{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:56px;
+    align-items:center;
+  }
+  .hero-copy h1{
+    font-size:clamp(2.5rem, 5vw, 3.6rem);
+    line-height:1.03;
+    text-transform:uppercase;
+  }
+  .hero-copy h1 em{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    color:var(--teal-dark);
+    text-transform:none;
+    display:block;
+    font-size:0.62em;
+    margin-bottom:6px;
+  }
+  .hero-copy p.lede{
+    margin-top:22px;
+    font-size:1.08rem;
+    color:var(--ink-soft);
+    max-width:46ch;
+  }
+  .hero-actions{
+    margin-top:34px;
+    display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+  }
+  .hero-meta{
+    margin-top:46px;
+    display:flex; gap:34px; flex-wrap:wrap;
+  }
+  .hero-meta div{ border-left:2px solid var(--tan); padding-left:14px; }
+  .hero-meta strong{ display:block; font-size:1.5rem; font-weight:800; color:var(--ink);}
+  .hero-meta span{ font-size:0.8rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.03em;}
+
+  .hero-visual{
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .hero-ring{
+    position:relative;
+    width:min(420px, 90%);
+    aspect-ratio:1;
+    border-radius:50%;
+    border:14px solid var(--white);
+    outline:3px solid var(--teal);
+    outline-offset:-3px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .hero-ring img{ width:100%; height:100%; object-fit:cover; }
+  .hero-badge{
+    position:absolute;
+    bottom:-6px; left:-18px;
+    background:var(--charcoal);
+    color:var(--white);
+    padding:16px 20px;
+    border-radius:14px;
+    display:flex; align-items:center; gap:12px;
+    box-shadow:var(--shadow);
+  }
+  .hero-badge .grid-mark{ width:30px; }
+  .hero-badge p{ font-size:0.78rem; line-height:1.3; max-width:15ch; color:rgba(255,255,255,0.85); }
+  .hero-badge strong{ display:block; font-size:0.95rem; color:var(--white); }
+  .hero-corner{
+    position:absolute; top:26px; right:-6px;
+  }
+
+  /* -------- trust strip -------- */
+  .trust{
+    background:var(--teal-deep);
+    color:var(--white);
+    padding:22px 0;
+  }
+  .trust .container{
+    display:flex; flex-wrap:wrap; gap:24px;
+    justify-content:space-between; align-items:center;
+  }
+  .trust-item{ display:flex; align-items:center; gap:12px; font-size:0.88rem; color:rgba(255,255,255,0.92);}
+  .trust-item .dot{ width:7px; height:7px; border-radius:50%; background:var(--tan-light); flex-shrink:0;}
+
+  /* -------- section shell -------- */
+  section{ padding:96px 0; }
+  .section-head{
+    max-width:640px;
+    margin-bottom:56px;
+  }
+  .section-head h2{
+    font-size:clamp(2rem, 3.4vw, 2.6rem);
+    margin-top:10px;
+    text-transform:uppercase;
+    line-height:1.08;
+  }
+  .section-head p{ margin-top:16px; color:var(--ink-soft); font-size:1.02rem; max-width:52ch;}
+  .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+
+  /* -------- servicios -------- */
+  .services{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:26px;
+  }
+  .service-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:20px;
+    overflow:hidden;
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .service-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow); }
+  .service-photo{ aspect-ratio:4/3; overflow:hidden; }
+  .service-photo img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease;}
+  .service-card:hover .service-photo img{ transform:scale(1.06); }
+  .service-body{ padding:26px 26px 30px; }
+  .service-index{
+    font-family:'Fraunces', serif; font-style:italic; color:var(--tan); font-size:0.95rem;
+  }
+  .service-body h3{ font-size:1.32rem; margin-top:8px; text-transform:uppercase; }
+  .service-body p{ margin-top:10px; color:var(--ink-soft); font-size:0.95rem; }
+
+  /* -------- galeria -------- */
+  .gallery-tabs{
+    display:flex; gap:10px; margin-bottom:34px; flex-wrap:wrap;
+  }
+  .gallery-tabs label{
+    padding:10px 20px;
+    border-radius:100px;
+    border:1.5px solid var(--line);
+    font-size:0.85rem; font-weight:700;
+    text-transform:uppercase; letter-spacing:0.03em;
+    cursor:pointer;
+    color:var(--ink-soft);
+    transition: all .2s ease;
+  }
+  input[name="filter"]{ display:none; }
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-auto-rows:170px;
+    gap:14px;
+  }
+  .gallery-grid figure{
+    border-radius:14px; overflow:hidden; position:relative;
+    grid-column:span 1; grid-row:span 1;
+  }
+  .gallery-grid figure.tall{ grid-row:span 2; }
+  .gallery-grid figure.wide{ grid-column:span 2; }
+  .gallery-grid img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+  .gallery-grid figure:hover img{ transform:scale(1.08); }
+  .gallery-grid figcaption{
+    position:absolute; left:0; right:0; bottom:0;
+    padding:10px 14px;
+    font-size:0.72rem; font-weight:700; letter-spacing:0.04em; text-transform:uppercase;
+    color:var(--white);
+    background:linear-gradient(180deg, transparent, rgba(20,24,20,0.75));
+    opacity:0; transition:opacity .25s ease;
+  }
+  .gallery-grid figure:hover figcaption{ opacity:1; }
+
+  #cat-cocinas:checked ~ .gallery-wrap .gallery-grid figure:not([data-cat="cocinas"]),
+  #cat-closets:checked ~ .gallery-wrap .gallery-grid figure:not([data-cat="closets"]),
+  #cat-alacenas:checked ~ .gallery-wrap .gallery-grid figure:not([data-cat="alacenas"]){
+    display:none;
+  }
+  #cat-todos:checked ~ .gallery-tabs label[for="cat-todos"],
+  #cat-cocinas:checked ~ .gallery-tabs label[for="cat-cocinas"],
+  #cat-closets:checked ~ .gallery-tabs label[for="cat-closets"],
+  #cat-alacenas:checked ~ .gallery-tabs label[for="cat-alacenas"]{
+    background:var(--ink); border-color:var(--ink); color:var(--white);
+  }
+
+  /* -------- proceso -------- */
+  .process{ background:var(--charcoal); color:var(--white); }
+  .process .section-head p{ color:rgba(255,255,255,0.65); }
+  .process .eyebrow{ color:var(--tan-light); }
+  .process .section-head h2{ color:var(--white); }
+  .steps{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:24px;
+  }
+  .step{
+    border-top:2px solid rgba(255,255,255,0.18);
+    padding-top:22px;
+  }
+  .step .num{
+    font-family:'Fraunces', serif; font-style:italic; font-size:1.6rem; color:var(--teal);
+  }
+  .step h3{ color:var(--white); font-size:1.08rem; margin-top:12px; text-transform:uppercase;}
+  .step p{ margin-top:10px; font-size:0.9rem; color:rgba(255,255,255,0.62); }
+
+  /* -------- contacto -------- */
+  .contact{
+    display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;
+  }
+  .contact-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:38px;
+  }
+  .contact-row{
+    display:flex; gap:16px; padding:18px 0; border-bottom:1px solid var(--line);
+  }
+  .contact-row:last-child{ border-bottom:none; }
+  .contact-icon{
+    width:42px; height:42px; border-radius:50%;
+    background:rgba(62,156,147,0.12); color:var(--teal-dark);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .contact-row h4{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); font-weight:700;}
+  .contact-row p, .contact-row a{ margin-top:4px; font-size:1rem; font-weight:600; color:var(--ink); }
+  .contact-row a:hover{ color:var(--teal-dark); }
+  .contact-social{ display:flex; gap:12px; margin-top:24px; }
+  .social-btn{
+    width:44px; height:44px; border-radius:50%;
+    border:1.5px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--ink);
+    transition:all .2s ease;
+  }
+  .social-btn:hover{ background:var(--teal); border-color:var(--teal); color:var(--white); }
+
+  .map-wrap{
+    border-radius:22px; overflow:hidden; border:1px solid var(--line);
+    box-shadow:var(--shadow);
+    height:100%; min-height:420px;
+  }
+  .map-wrap iframe{ width:100%; height:100%; min-height:420px; border:0; filter:saturate(0.9); }
+
+  /* -------- CTA banda final -------- */
+  .cta-band{
+    background:var(--tan);
+    color:var(--charcoal);
+    padding:60px 0;
+  }
+  .cta-band .container{
+    display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  }
+  .cta-band h2{ font-size:1.8rem; text-transform:uppercase; color:var(--charcoal); max-width:16ch; }
+  .cta-band .btn-primary{ background:var(--charcoal); box-shadow:none; }
+  .cta-band .btn-primary:hover{ background:#000; }
+
+  /* -------- footer -------- */
+  footer{ background:var(--charcoal); color:rgba(255,255,255,0.55); padding:44px 0 30px; }
+  .footer-top{
+    display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap;
+    padding-bottom:28px; border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+  .footer-brand{ display:flex; align-items:center; gap:12px; color:var(--white); font-weight:800; }
+  .footer-bottom{
+    display:flex; justify-content:space-between; padding-top:22px; font-size:0.82rem; flex-wrap:wrap; gap:10px;
+  }
+
+  /* -------- responsive -------- */
+  @media (max-width: 920px){
+    nav.links{ display:none; }
+    .hero .container{ grid-template-columns:1fr; }
+    .hero-visual{ order:-1; }
+    .services{ grid-template-columns:1fr; }
+    .steps{ grid-template-columns:1fr 1fr; }
+    .contact{ grid-template-columns:1fr; }
+    .gallery-grid{ grid-template-columns:repeat(2, 1fr); grid-auto-rows:150px; }
+    .gallery-grid figure.wide{ grid-column:span 2; }
+    section{ padding:64px 0; }
+    .trust .container{ justify-content:flex-start; }
+  }
+  @media (max-width: 520px){
+    .gallery-grid{ grid-template-columns:repeat(2, 1fr); }
+    .header-cta .btn-ghost{ display:none; }
+    .cta-band .container{ flex-direction:column; align-items:flex-start; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; animation:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#top" class="brand">
+      <div class="brand-mark">EES</div>
+      <div class="brand-name">EES Cocinas Integrales<small>y Closets &middot; Diseño a tu medida</small></div>
+    </a>
+    <nav class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="tel:+527776904243">777 690 4243</a>
+      <a class="btn btn-primary" href="https://wa.me/527776904243?text=Hola%2C%20me%20interesa%20cotizar%20una%20cocina%20integral" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-copy">
+        <h1><em>Diseño, fabricación e instalación</em>Cocinas y closets a tu medida</h1>
+        <p class="lede">Fabricamos cocinas integrales, closets y alacenas para tu casa en Cuernavaca y alrededores. Medimos tu espacio, lo diseñamos contigo y lo instalamos — sin intermediarios.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/527776904243?text=Hola%2C%20me%20interesa%20cotizar%20una%20cocina%20integral" target="_blank" rel="noopener">Pedir cotización</a>
+          <a class="btn btn-ghost" href="#galeria">Ver trabajos realizados</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>100%</strong><span>Diseño a medida</span></div>
+          <div><strong>Cuernavaca</strong><span>Y alrededores</span></div>
+          <div><strong>3</strong><span>Líneas: cocinas, closets y alacenas</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-corner grid-mark">
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </div>
+        <div class="hero-ring">
+          <img src="images/cocina-3.jpg" alt="Cocina integral fabricada por EES en Cuernavaca">
+        </div>
+        <div class="hero-badge">
+          <div class="grid-mark on-dark"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div>
+            <strong>Hecho a medida</strong>
+            <p>Cada mueble se diseña para tu espacio</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust">
+    <div class="container">
+      <div class="trust-item"><span class="dot"></span>Visita y medición sin costo</div>
+      <div class="trust-item"><span class="dot"></span>Cocinas integrales, closets y alacenas</div>
+      <div class="trust-item"><span class="dot"></span>Fabricación e instalación propia</div>
+      <div class="trust-item"><span class="dot"></span>Amatitlán, Cuernavaca, Morelos</div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Lo que hacemos</span>
+        <h2>Tres líneas, un mismo taller</h2>
+        <p>Del diseño a la instalación final, cada pieza se fabrica pensando en cómo usas tu espacio todos los días.</p>
+      </div>
+      <div class="services">
+        <div class="service-card">
+          <div class="service-photo"><img src="images/cocina-1.jpg" alt="Cocina integral en madera clara con cubierta de mármol"></div>
+          <div class="service-body">
+            <span class="service-index">01 — Cocinas</span>
+            <h3>Cocinas integrales</h3>
+            <p>Cocinas completas en distintos acabados: madera, lacados y color, con cubiertas de mármol o cuarzo y herrajes de calidad.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-photo"><img src="images/closet-2.jpg" alt="Closet blanco a medida con cajones y puertas abatibles"></div>
+          <div class="service-body">
+            <span class="service-index">02 — Closets</span>
+            <h3>Closets</h3>
+            <p>Closets abatibles o corredizos, con cajoneras, entrepaños y espacios para colgar diseñados a la medida exacta de tu recámara.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-photo"><img src="images/alacena-vitrina.jpg" alt="Alacena y mueble de servicio a medida"></div>
+          <div class="service-body">
+            <span class="service-index">03 — Alacenas</span>
+            <h3>Alacenas y muebles de servicio</h3>
+            <p>Alacenas, centros de entretenimiento y muebles auxiliares que aprovechan cada rincón, incluso espacios poco convencionales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria" style="background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Trabajos realizados</span>
+        <h2>Proyectos entregados en Cuernavaca</h2>
+        <p>Una muestra real de cocinas, closets y alacenas que hemos fabricado e instalado.</p>
+      </div>
+
+      <input type="radio" name="filter" id="cat-todos" checked>
+      <input type="radio" name="filter" id="cat-cocinas">
+      <input type="radio" name="filter" id="cat-closets">
+      <input type="radio" name="filter" id="cat-alacenas">
+
+      <div class="gallery-tabs">
+        <label for="cat-todos">Todos</label>
+        <label for="cat-cocinas">Cocinas</label>
+        <label for="cat-closets">Closets</label>
+        <label for="cat-alacenas">Alacenas</label>
+      </div>
+
+      <div class="gallery-wrap">
+        <div class="gallery-grid" id="grid-todos">
+          <figure class="wide tall" data-cat="cocinas"><img src="images/cocina-3.jpg" alt="Cocina integral con cubierta de mármol"><figcaption>Cocina integral</figcaption></figure>
+          <figure data-cat="cocinas"><img src="images/cocina-1.jpg" alt="Cocina integral en madera clara"><figcaption>Cocina integral</figcaption></figure>
+          <figure data-cat="closets" class="tall"><img src="images/closet-1.jpg" alt="Closet blanco de piso a techo"><figcaption>Closet</figcaption></figure>
+          <figure data-cat="cocinas"><img src="images/cocina-6.jpg" alt="Cocina integral en tonos oscuros"><figcaption>Cocina integral</figcaption></figure>
+          <figure data-cat="alacenas"><img src="images/alacena-consola.jpg" alt="Alacena en madera oscura tipo consola"><figcaption>Alacena</figcaption></figure>
+          <figure data-cat="closets"><img src="images/closet-3.jpg" alt="Closet a medida con entrepaños abiertos"><figcaption>Closet</figcaption></figure>
+          <figure data-cat="cocinas" class="wide"><img src="images/cocina-4.jpg" alt="Cocina integral estilo L completa"><figcaption>Cocina integral</figcaption></figure>
+          <figure data-cat="alacenas"><img src="images/alacena-vitrina.jpg" alt="Vitrina y alacena en madera oscura"><figcaption>Alacena</figcaption></figure>
+          <figure data-cat="closets"><img src="images/closet-6.jpg" alt="Closet abierto con entrepaños y cajonera"><figcaption>Closet</figcaption></figure>
+          <figure data-cat="cocinas"><img src="images/cocina-7.jpg" alt="Cocina integral con acero inoxidable"><figcaption>Cocina integral</figcaption></figure>
+          <figure data-cat="alacenas" class="tall"><img src="images/alacena-4.jpg" alt="Centro de entretenimiento a medida"><figcaption>Alacena</figcaption></figure>
+          <figure data-cat="closets"><img src="images/closet-5.jpg" alt="Closet con puertas abatibles y cajonera"><figcaption>Closet</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section id="proceso" class="process">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2>De la medición a la instalación</h2>
+        <p>Un proceso directo, sin intermediarios: hablas con quien diseña y con quien instala.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="num">01</span>
+          <h3>Visita y medición</h3>
+          <p>Vamos a tu casa en Cuernavaca, medimos el espacio y platicamos qué necesitas.</p>
+        </div>
+        <div class="step">
+          <span class="num">02</span>
+          <h3>Diseño y cotización</h3>
+          <p>Te proponemos distribución, acabados y precio antes de fabricar nada.</p>
+        </div>
+        <div class="step">
+          <span class="num">03</span>
+          <h3>Fabricación</h3>
+          <p>Construimos cada pieza a la medida exacta en nuestro taller.</p>
+        </div>
+        <div class="step">
+          <span class="num">04</span>
+          <h3>Instalación</h3>
+          <p>Instalamos y dejamos el mueble listo para usarse ese mismo día.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Contacto</span>
+        <h2>Cotiza tu proyecto</h2>
+        <p>Escríbenos por WhatsApp con las medidas de tu espacio o visítanos en el taller.</p>
+      </div>
+      <div class="contact">
+        <div class="contact-card">
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.5 16.9v2.6a1.9 1.9 0 0 1-2.1 1.9 18.6 18.6 0 0 1-8.1-2.9 18.3 18.3 0 0 1-5.6-5.6A18.6 18.6 0 0 1 1.8 4.7 1.9 1.9 0 0 1 3.7 2.6h2.6a1.9 1.9 0 0 1 1.9 1.6c.1.9.3 1.8.6 2.6a1.9 1.9 0 0 1-.4 2L7.3 10a15 15 0 0 0 5.6 5.6l1.2-1.2a1.9 1.9 0 0 1 2-.4c.8.3 1.7.5 2.6.6a1.9 1.9 0 0 1 1.6 1.9Z"/></svg>
+            </div>
+            <div>
+              <h4>Teléfono / WhatsApp</h4>
+              <a href="https://wa.me/527776904243" target="_blank" rel="noopener">777 690 4243</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6.5-9 12-9 12S3 16.5 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Taller</h4>
+              <p>Av. Cuauhtémoc 38-C, Amatitlán<br>62410 Cuernavaca, Morelos</p>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            </div>
+            <div>
+              <h4>Horario</h4>
+              <p>Lunes a sábado — escríbenos y coordinamos tu visita</p>
+            </div>
+          </div>
+          <div class="contact-social">
+            <a class="social-btn" href="https://wa.me/527776904243" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.5-1.8-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C11 9.4 10.5 8.2 10.3 7.7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9 1-.9 2.3 0 1.3 1 2.6 1.1 2.8.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3 0-.1-.2-.2-.5-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+            </a>
+            <a class="social-btn" href="https://www.facebook.com/search/top?q=ess%20cocinas%20integrales%20y%20closets" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8.1h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.2C16.5 3.1 15.5 3 14.4 3c-2.4 0-4 1.4-4 4.1v2.6H7.7v3.2h2.7V21h3.1Z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps?q=Mueblería%20ESS,Av.%20Cuauhtémoc%2038C,Amatitlán,Cuernavaca&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de EES Cocinas Integrales y Closets en Cuernavaca"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <div class="container">
+      <h2>¿Listo para diseñar tu cocina o closet?</h2>
+      <a class="btn btn-primary" href="https://wa.me/527776904243?text=Hola%2C%20me%20interesa%20cotizar%20una%20cocina%20integral" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <div class="grid-mark on-dark"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          EES Cocinas Integrales y Closets
+        </div>
+        <p style="margin-top:10px; max-width:38ch; font-size:0.88rem;">Diseño, fabricación e instalación de cocinas, closets y alacenas a la medida en Cuernavaca, Morelos.</p>
+      </div>
+      <div style="font-size:0.88rem;">
+        <p>Av. Cuauhtémoc 38-C, Amatitlán</p>
+        <p>62410 Cuernavaca, Morelos</p>
+        <p style="margin-top:8px;"><a href="tel:+527776904243" style="color:var(--white);">777 690 4243</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> EES Cocinas Integrales y Closets. Todos los derechos reservados.</span>
+      <span>Diseño a tu medida.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
